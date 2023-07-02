@@ -1,0 +1,150 @@
+:root {
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --brightBlueA: hsl(245, 75%, 52%, 0.4);
+    --brightBlueB: hsla(245, 75%, 52%, 0.7);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-image: url('images/pattern-background-mobile.svg');
+    background-color: var(--paleBlue);
+    background-repeat: no-repeat;
+    background-size: contain;
+    justify-content: center;
+    min-height: 100vh;
+}
+main {
+    background-color: var(--white);
+    border-radius: 25px;
+    overflow: hidden;
+    height: 567px;
+    width: 328px;
+}
+.heroImg {
+    height: 161px;
+    width: 100%;
+}
+.paragraphs {
+    padding: 37px 24px 20px;
+    text-align: center;
+}
+h3 {
+    color: var(--darkBlue);
+}
+.paragraphs p {
+    color: var(--desaturatedBlue);
+    line-height: 23px;
+    font-weight: 700;
+    margin-top: 15px;
+    font-size: 16px;
+}
+.annualPlan {
+    background-color: var(--veryPaleBlue);
+    border-radius: 15px;
+    margin: 10px 24px;
+}
+body, .annualPlan {
+    align-items: center;
+    display: flex;
+}
+.annualPlan span {
+    flex: 25%;
+}
+.annualPlan p {
+    font-weight: 700;
+    flex: 55%;
+}
+.annualPlan a {
+    color: var(--brightBlue);
+    flex: 20%;
+}
+.price, .annualPlan a {
+    font-weight: 500;
+}
+.buttons {
+    margin: 25px 24px 0px;
+}
+.fs_btn {
+    box-shadow: 0 8px 16px 0 var(--brightBlueA);
+    background-color: var(--brightBlue);
+    color: var(--white);
+    border-radius: 10px;
+    font-size: 16px;
+}
+.sd_btn {
+    background-color: transparent;
+}
+.price, .sd_btn {
+    color: var(--desaturatedBlue);
+}
+h3, .sd_btn {
+    font-weight: 900;
+}
+p, h3, .fs_btn, .sd_btn {
+    font-family: 'Red Hat Display', sans-serif;
+}
+.cost, .annualPlan a, .sd_btn {
+    font-size: 14px;
+}
+.annualPlan, .fs_btn, .sd_btn {
+    padding: 15px;
+    width: 279px;
+}
+.fs_btn, .sd_btn {
+    border: none;
+}
+.sd_btn p {
+    display: inline-block;
+}
+.sd_btn p:hover {
+    color: var(--black);
+}
+.annualPlan a:hover {
+    color: var(--brightBlueB);
+    text-decoration: none;
+}
+.fs_btn:hover {
+    background-color: var(--brightBlueB);
+}
+body, .sd_btn p:hover, .annualPlan a:hover, .fs_btn:hover {
+    cursor: url('images/pointinghand.svg'), auto;
+}
+
+/* Styling For big screens */
+
+@media screen and (min-width: 750px) {
+    body {
+        background-image: url('images/pattern-background-desktop.svg');
+        background-position: 0px -90px;
+    }
+    main {
+        height: 631px;
+        width: 408px;
+    }
+    .heroImg {
+        height: 200px;
+    }
+    .annualPlan {
+        margin: 10px 44px;
+    }
+    .buttons {
+        margin: 25px 44px 0px;
+    }
+    .sd_btn {
+        margin-top: 15px;
+    }
+    .annualPlan, .fs_btn, .sd_btn {
+        width: 320px;
+    }
+}
